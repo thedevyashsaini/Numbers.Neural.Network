@@ -2,6 +2,10 @@
 
 Welcome to the Number's Neural Network (NNN) project! This is a basic neural network **built from scratch** to recognize hand-drawn digits (0-9) using a custom dataset. The project includes a Python implementation for training and a TypeScript port for visualization. Let's dive into the world of digits and neural networks!
 
+Check out the [Hosted Demo](https://tds-nnn.vercel.app/) (99% Train Accuracy, 55% Test Accuracy - Overfitted 🫠)
+
+![Screenshot 2025-01-09 022552](https://github.com/user-attachments/assets/dd8deee7-4e84-4840-8b35-b5b5ca01437f)
+
 ## Project Structure
 
 - [`main.py`](main.py): Contains the neural network architecture and functions to load the pre-trained model.
@@ -12,7 +16,7 @@ Welcome to the Number's Neural Network (NNN) project! This is a basic neural net
 
 ### Neural Network Architecture Overview
 
-Our neural network is a multi-class classification model with **one-hot encoding**. Here's a quick rundown of the architecture:
+Our neural network is a **multi-class classification** model with **one-hot encoding**. Here's a quick rundown of the architecture:
 
 - **Input Layer**: **100 neurons** (because the grid I'm using is 10*10 | make sure ur dataset is compatible with this)
 - **Hidden Layers**: Three hidden layers with **20, 20, and 10 neurons** respectively. We like to keep things interesting.
