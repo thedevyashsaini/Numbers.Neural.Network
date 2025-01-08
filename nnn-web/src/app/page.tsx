@@ -145,7 +145,7 @@ function Home() {
         <div className="flex items-center mb-8">
           <Brain className="w-8 h-8 text-blue-600 mr-3" />
           <h1 className="text-3xl font-bold text-gray-900">
-            Number's Neural Network (NNN)
+            Number&apos;s Neural Network (NNN)
           </h1>
         </div>
 
