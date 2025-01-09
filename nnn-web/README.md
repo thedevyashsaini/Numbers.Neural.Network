@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NNN Web
+
+NNN Web is a TypeScript NextJS port for visualizing the Number's Neural Network (NNN) project. This project includes a neural network built from scratch to recognize hand-drawn digits (0-9) using a custom dataset. 
+Check out the [Hosted Page](https://tds-nnn.vercel.app/)
+
+P.S.: This is not compatible with portrait widths.
+
+## Project Structure
+
+- `NNfunctions.ts`: Contains the neural network functions and model parameters.
+- `src/components/render-layer.tsx`: Component to render each layer of the neural network.
+- `src/components/render-input-grid.tsx`: Component to render the input grid.
+- `public/model_params.json`: Contains the pre-trained model parameters.
+- `pages/index.tsx`: Main page component that visualizes the neural network.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js
+- npm
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Get inside the directory**:
+   ```sh
+   cd nnn-web
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Install Dependencies**:
+   ```sh
+   npm install
+   ```
 
-## Learn More
+### Running the Development Server
 
-To learn more about Next.js, take a look at the following resources:
+1. **Start the development server**:
+   ```sh
+   npm run dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Open the application**:
+   Open [http://localhost:3000](http://localhost:3000) in your browser to see the visualization.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Neural Network Functions
 
-## Deploy on Vercel
+The neural network functions are defined in the `NNfunctions.ts` file. This file includes functions for matrix multiplication, adding biases, activation functions (ReLU and softmax), and the feedforward process.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Model Parameters
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The pre-trained model parameters are stored in the `public/model_params.json` file. These parameters are loaded asynchronously when the application starts.
+
+### Visualization Components
+
+- **RenderLayer**: This component renders each layer of the neural network. It is defined in the `src/components/render-layer.tsx` file.
+- **RenderInputGrid**: This component renders the input grid where users can draw digits. It is defined in the `src/components/render-input-grid.tsx` file.
+
+### Usage
+
+1. **Draw on the Input Grid**:
+   Use your mouse draw on the input grid. The neural network will process the input and display the activations for each layer.
+
+2. **Clear the Grid**:
+   Click the "Clear" button to reset the input grid and activations.
+
+3. **Copy Layer Parameters**:
+   Click the copy icon next to each layer to copy the layer parameters to the clipboard.
