@@ -10,7 +10,11 @@ export type ModelParams = {
 };
 
 export const relu = (Z: number[]): number[] =>
-  Z.map((value) => Math.max(0, value));
+  // Old Model: Relu
+  // Z.map((value) => Math.max(0, value));
+
+  // New Model: Leaky Relu
+  Z.map((value) => Math.max(0.01 * value, value));
 
 export const contractToUnitRange = (Z: number[]): number[] =>
   Z.map((value) => value / (1 + value));
